@@ -24,10 +24,13 @@ public class BothLibs extends AppCompatActivity {
         EditText urlTextView = findViewById(R.id.urlEditText);
         Button updateBtn = findViewById(R.id.updateBtn);
 
+        urlTextView.setText(PrefUtil.getLastImageUrl(this));
+
         updateBtn.setOnClickListener(view -> {
             Uri url = Uri.parse(urlTextView.getText().toString());
             Glide.with(this).load(url).into(glideView);
             Picasso.get().load(url).into(picassoView);
+            PrefUtil.storeLastImageUrl(this, url.toString());
         });
     }
 }
