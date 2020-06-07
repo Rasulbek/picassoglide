@@ -15,5 +15,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bothLibsBtn).setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), BothLibs.class));
         });
+
+        findViewById(R.id.picassoActivityBtn).setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), PicassoWay.class));
+        });
     }
 }
