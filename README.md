@@ -1,1 +1,1 @@
-# picassoglide
+# Comparision: Picasso vs. Glide
